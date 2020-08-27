@@ -1,7 +1,7 @@
 tinder-cloneをやってみるやつ。  
 [You Tubeのリンク](https://www.youtube.com/watch?v=DQfeB_FKKkc&t=2538s)
 
-Amplifyの[リンク]
+Amplifyの[リンク](https://master.d2w0qf3fbq16g0.amplifyapp.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
