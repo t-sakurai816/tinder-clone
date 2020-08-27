@@ -1,3 +1,8 @@
+tinder-cloneをやってみるやつ。  
+[You Tubeのリンク](https://www.youtube.com/watch?v=DQfeB_FKKkc&t=2538s)
+
+Amplifyの[リンク]
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
