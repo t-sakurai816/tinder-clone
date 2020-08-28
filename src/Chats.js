@@ -14,7 +14,7 @@ const Chats = () => {
 
       <Chat 
         name="Avril Ramona Lavigne"
-        message="Hello!"
+        message="Hello"
         timestamp="3 days ago"
         profilePic="https://www.sonymusic.co.jp/adm_image/common/artist_image/80000000/80000406/artist_photo/54466.jpg"
       />
