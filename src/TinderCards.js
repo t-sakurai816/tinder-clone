@@ -9,11 +9,18 @@ const TinderCards = () => {
   //Piece of code which runs based on a condition
   useEffect (() => {
     //this is where the code runs...
-    database.collection('people').onSnapshot(snapshot => (
+    
+    const unsubscribe = database
+    .collection('people')
+    .onSnapshot((snapshot) => 
       setPeople(snapshot.docs.map(doc => doc.data()))
-    ))
-    //this will run ONCE when the component loads, and never again
-  },[]);
+    );
+
+    return () => {
+      //this is cleanup...
+      unsubscribe();
+    };
+  }, []);
 
   // BAD
   // const people = [];
@@ -24,7 +31,7 @@ const TinderCards = () => {
 
   return (
     <div>
-      <h1>Tinder Cards</h1>
+      {/* <h1>Tinder Cards</h1> */}
       <div className="tinderCards__cardContainer">
         {people.map(person => (
           <TinderCard

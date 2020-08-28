@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from './Header'
-import TinderCards from "./TinderCards"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import TinderCards from './TinderCards'
+import SwipeButtons from './SwipeButtons'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 
@@ -18,6 +19,7 @@ const App = () => {
           </Route>
           <Route path="/"> {/*1番上に持ってきてはいけない*/}
             <TinderCards />
+            <SwipeButtons />
           </Route>
         </Switch>
         {/* Thinder Cards */}
