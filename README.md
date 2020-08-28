@@ -3,6 +3,15 @@ tinder-cloneをやってみるやつ。
 
 Amplifyの[リンク](https://master.d2w0qf3fbq16g0.amplifyapp.com/)
 
+## 入れたパッケージ
+
+```
+npm install @material-ui/core
+npm install @material-ui/icons
+npm install react-router-dom
+npm install react-tinder-card
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
