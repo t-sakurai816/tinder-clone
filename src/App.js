@@ -11,13 +11,13 @@ const App = () => {
     <div className="App">
       {/* <h1>Let's build the TINDER Clone App !</h1> */}
       <Router>
-      {/* Header */}
-      <Header />
         <Switch>
           <Route path="/chat">
+            <Header backButton="/"/>
             <h1>I am the chatpage</h1>
           </Route>
           <Route path="/"> {/*1番上に持ってきてはいけない*/}
+            <Header />  
             <TinderCards />
             <SwipeButtons />
           </Route>
