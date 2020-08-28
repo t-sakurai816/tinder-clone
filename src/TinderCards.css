@@ -25,3 +25,11 @@
 .swipe {
   position: absolute;
 }
+
+.swipeDirection {
+  /* color:red; */
+  display: flex;
+  justify-content: center;
+  margin-top: 60vh;
+  font-size: 50px;
+}

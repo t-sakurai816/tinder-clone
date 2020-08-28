@@ -5,16 +5,30 @@ import './TinderCards.css'
 
 const TinderCards = () => {
   const [people, setPeople] = useState([]);
+  
+  const onSwipe = (direction) => { //スワイプの方向
+    console.log('You swiped: ' + direction)
+    // if(direction === 'right'){
+    //   alert("右スワイプ")
+    // }else if(direction === 'left') {
+    //   alert("左スワイプ")
+    // }
+  }
+
+
+  const onCardLeftScreen = (myidentifier) => {
+    console.log(myidentifier + 'left the screen')
+  }
 
   //Piece of code which runs based on a condition
-  useEffect (() => {
+  useEffect(() => {
     //this is where the code runs...
-    
+
     const unsubscribe = database
-    .collection('people')
-    .onSnapshot((snapshot) => 
-      setPeople(snapshot.docs.map(doc => doc.data()))
-    );
+      .collection('people')
+      .onSnapshot((snapshot) =>
+        setPeople(snapshot.docs.map(doc => doc.data()))
+      );
 
     return () => {
       //this is cleanup...
@@ -27,7 +41,7 @@ const TinderCards = () => {
   // people.push('sonny', 'qazi')
 
   // GOOD(Push to an array in React)
-  // setPeople([...peoplem, 'sonny','qazi'])
+  // setPeople([...people, 'sonny','qazi'])
 
   return (
     <div>
@@ -35,9 +49,11 @@ const TinderCards = () => {
       <div className="tinderCards__cardContainer">
         {people.map(person => (
           <TinderCard
+            onSwipe={onSwipe}
+            onCardLeftScreen={() => onCardLeftScreen('fooBar')} //スワイプ終了後に呼び出される
             className="swipe"
             key={person.name}
-            preventSwipe={['up', 'down']}
+            preventSwipe={['up', 'down']} //up, downにスワイプを阻止
           >
             <div
               style={{ backgroundImage: `url(${person.url})` }}
@@ -47,6 +63,10 @@ const TinderCards = () => {
             </div>
           </TinderCard>
         ))}
+      </div>
+      <div className="swipeDirection">
+          {/* <p>hoge</p> */}
+        <p></p>
       </div>
     </div>
   )
