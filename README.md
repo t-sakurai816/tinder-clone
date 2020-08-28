@@ -10,6 +10,7 @@ npm install @material-ui/core
 npm install @material-ui/icons
 npm install react-router-dom
 npm install react-tinder-card
+npm install firebase
 ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
