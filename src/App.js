@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header'
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <h1>Let's build the TINDER Clone App !</h1>
