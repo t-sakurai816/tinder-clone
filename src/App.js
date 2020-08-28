@@ -10,9 +10,9 @@ const App = () => {
   return (
     <div className="App">
       {/* <h1>Let's build the TINDER Clone App !</h1> */}
+      <Router>
       {/* Header */}
       <Header />
-      <Router>
         <Switch>
           <Route path="/chat">
             <h1>I am the chatpage</h1>
