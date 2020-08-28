@@ -1,7 +1,8 @@
 import React from 'react';
-import Header from './Header'
-import TinderCards from './TinderCards'
-import SwipeButtons from './SwipeButtons'
+import Header from './Header';
+import TinderCards from './TinderCards';
+import SwipeButtons from './SwipeButtons';
+import Chats from './Chats';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
@@ -14,7 +15,7 @@ const App = () => {
         <Switch>
           <Route path="/chat">
             <Header backButton="/"/>
-            <h1>I am the chatpage</h1>
+            <Chats />
           </Route>
           <Route path="/"> {/*1番上に持ってきてはいけない*/}
             <Header />  
